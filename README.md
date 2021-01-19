@@ -1,6 +1,6 @@
 # TensorFlowHelp
 1. What does `batch_size` mean?
- Example code, where `batch_size` is :
+ Example code, where `batch_size` is used:
  ```
 raw_train_ds = tf.keras.preprocessing.text_dataset_from_directory(
     directory='aclImdb/train',
