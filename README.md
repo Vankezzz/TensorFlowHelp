@@ -10,18 +10,7 @@ raw_train_ds = tf.keras.preprocessing.text_dataset_from_directory(
     seed=seed)                  # Optional random seed for shuffling and transformations.
 ```
 
-* Source: https://qna.habr.com/q/733739
-```
-`batch_size` -  - влияет на среднюю ошибку, на которую сеть будет реагировать.
-Например если взять batch=1. А "истина" районе 5.
-Шаг 1. получим условное смещение весов на +10;
-Шаг 2. получим условное смещение весов на -2; Итог +8;
-Взять 2.
-Шаг 1. получим условное смещение весов на (+10 + -2) / 2=> 4;
-Мы приближаемся быстрее.
-Если взять мало, то сеть будет туда-сюда "метаться". Если много, то ошибка "средней по больнице" будет очень мала в районе нуля, и обучаться тогда она будет долго.
-```
-* Source: https://stats.stackexchange.com/questions/153531/what-is-batch-size-in-neural-network
+* Source answer: https://stats.stackexchange.com/questions/153531/what-is-batch-size-in-neural-network
 ```
 Typically when people say online learning they mean batch_size=1. 
 The idea behind online learning is that you update your model as soon as you see the example. 
