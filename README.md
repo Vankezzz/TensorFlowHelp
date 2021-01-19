@@ -10,7 +10,7 @@ raw_train_ds = tf.keras.preprocessing.text_dataset_from_directory(
     seed=seed)                  # Optional random seed for shuffling and transformations.
 ```
 
-* Source answer: https://stats.stackexchange.com/questions/153531/what-is-batch-size-in-neural-network
+Source answer (if you wonder then should read contents in url): https://stats.stackexchange.com/questions/153531/what-is-batch-size-in-neural-network
 ```
 Typically when people say online learning they mean batch_size=1. 
 The idea behind online learning is that you update your model as soon as you see the example. 
