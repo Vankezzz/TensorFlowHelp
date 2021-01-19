@@ -23,7 +23,12 @@ raw_train_ds = tf.keras.preprocessing.text_dataset_from_directory(
 ```
 * Source: https://stats.stackexchange.com/questions/153531/what-is-batch-size-in-neural-network
 ```
-Typically when people say online learning they mean batch_size=1. The idea behind online learning is that you update your model as soon as you see the example. With larger batch size it means that first you are looking through the multiple samples before doing update. In RNN size of the batch can have different meanings. Usually, It's common to split training sequence into window of fixed size (like 10 words). In this case including 100 of these windows during the training will mean that you have batch_size=100
+Typically when people say online learning they mean batch_size=1. 
+The idea behind online learning is that you update your model as soon as you see the example. 
+With larger batch size it means that first you are looking through the multiple samples before doing update. 
+In RNN size of the batch can have different meanings. 
+Usually, It's common to split training sequence into window of fixed size (like 10 words). 
+In this case including 100 of these windows during the training will mean that you have batch_size=100
 
 In the neural network terminology:
 one epoch = one forward pass and one backward pass of all the training examples
