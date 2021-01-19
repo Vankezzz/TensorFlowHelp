@@ -1,6 +1,6 @@
 # TensorFlowHelp
 1. What does batch_size mean?
-Source: https://qna.habr.com/q/733739
+* Source: https://qna.habr.com/q/733739
 ```
 raw_train_ds = tf.keras.preprocessing.text_dataset_from_directory(
     directory='aclImdb/train',
@@ -20,7 +20,7 @@ raw_train_ds = tf.keras.preprocessing.text_dataset_from_directory(
 Мы приближаемся быстрее.
 Если взять мало, то сеть будет туда-сюда "метаться". Если много, то ошибка "средней по больнице" будет очень мала в районе нуля, и обучаться тогда она будет долго.
 ```
-Source: https://stats.stackexchange.com/questions/153531/what-is-batch-size-in-neural-network
+* Source: https://stats.stackexchange.com/questions/153531/what-is-batch-size-in-neural-network
 ```
 Typically when people say online learning they mean batch_size=1. The idea behind online learning is that you update your model as soon as you see the example. With larger batch size it means that first you are looking through the multiple samples before doing update. In RNN size of the batch can have different meanings. Usually, It's common to split training sequence into window of fixed size (like 10 words). In this case including 100 of these windows during the training will mean that you have batch_size=100
 
