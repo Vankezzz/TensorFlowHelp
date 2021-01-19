@@ -13,7 +13,8 @@ raw_train_ds = tf.keras.preprocessing.text_dataset_from_directory(
     seed=seed)                  # Optional random seed for shuffling and transformations.
 ```
 
-Source answer (if you wonder then should read contents in url): https://stats.stackexchange.com/questions/153531/what-is-batch-size-in-neural-network
+Source answer (if you wonder then should read contents in url): 
+https://stats.stackexchange.com/questions/153531/what-is-batch-size-in-neural-network
 ```
 Typically when people say online learning they mean batch_size=1. 
 The idea behind online learning is that you update your model as soon as you see the example. 
@@ -24,8 +25,10 @@ In this case including 100 of these windows during the training will mean that y
 
 In the neural network terminology:
 one epoch = one forward pass and one backward pass of all the training examples
-batch size = the number of training examples in one forward/backward pass. The higher the batch size, the more memory space you'll need.
-number of iterations = number of passes, each pass using [batch size] number of examples. To be clear, one pass = one forward pass + one backward pass (we do not count the forward pass and backward pass as two different passes).
+batch size = the number of training examples in one forward/backward pass. 
+The higher the batch size, the more memory space you'll need.
+number of iterations = number of passes, each pass using [batch size] number of examples. 
+To be clear, one pass = one forward pass + one backward pass (we do not count the forward pass and backward pass as two different passes).
 Example: if you have 1000 training examples, and your batch size is 500, then it will take 2 iterations to complete 1 epoch.
 ```
 2. What does `seed` mean?
@@ -43,14 +46,16 @@ raw_train_ds = tf.keras.preprocessing.text_dataset_from_directory(
 ```
 Source answer1: https://stackoverflow.com/questions/38604437/what-is-a-seed-in-tensorflow
 ```
-The term "seed" is an abbreviation of the standard term "random seed". TensorFlow operators that produce random results accept an optional seed parameter.
+The term "seed" is an abbreviation of the standard term "random seed". 
+TensorFlow operators that produce random results accept an optional seed parameter.
 If you pass the same number to two instances of the same operator, they will produce the same sequence of results.
 ```
 Source answer2: https://towardsdatascience.com/how-to-solve-randomness-in-an-artificial-neural-network-3befc4f27d45
 ```
 To make the randomness predictable, we use the concept of seed. Seed helps get predictable, repeatable results every time
 ```
-Properly Setting the Random Seed in ML Experiments. Not as Simple as You Might Imagine: https://medium.com/@ODSC/properly-setting-the-random-seed-in-ml-experiments-not-as-simple-as-you-might-imagine-219969c84752
+Properly Setting the Random Seed in ML Experiments. Not as Simple as You Might Imagine: 
+https://medium.com/@ODSC/properly-setting-the-random-seed-in-ml-experiments-not-as-simple-as-you-might-imagine-219969c84752
 
 ## Usefull materials:
 1. Tensorflow for Deep Learning Research lectures: https://web.stanford.edu/class/cs20si/2017/lectures/
