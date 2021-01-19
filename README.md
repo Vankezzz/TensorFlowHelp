@@ -1,7 +1,7 @@
 # TensorFlowHelp
-1. What does batch_size mean?
-* Source: https://qna.habr.com/q/733739
-```
+1. What does `batch_size` mean?
+ Example code, where `batch_size` is :
+ ```
 raw_train_ds = tf.keras.preprocessing.text_dataset_from_directory(
     directory='aclImdb/train',
     batch_size=batch_size,      # Size of the batches of data. Default: 32.
@@ -10,6 +10,7 @@ raw_train_ds = tf.keras.preprocessing.text_dataset_from_directory(
     seed=seed)                  # Optional random seed for shuffling and transformations.
 ```
 
+* Source: https://qna.habr.com/q/733739
 ```
 `batch_size` -  - влияет на среднюю ошибку, на которую сеть будет реагировать.
 Например если взять batch=1. А "истина" районе 5.
