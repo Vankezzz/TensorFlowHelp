@@ -28,4 +28,19 @@ batch size = the number of training examples in one forward/backward pass. The h
 number of iterations = number of passes, each pass using [batch size] number of examples. To be clear, one pass = one forward pass + one backward pass (we do not count the forward pass and backward pass as two different passes).
 Example: if you have 1000 training examples, and your batch size is 500, then it will take 2 iterations to complete 1 epoch.
 ```
+2. What does `seed` mean?
+ Example code, where `seed` is used (python):
+ ```
+batch_size = 32
+seed = 42
 
+raw_train_ds = tf.keras.preprocessing.text_dataset_from_directory(
+    directory='aclImdb/train',
+    batch_size=batch_size,      # Size of the batches of data. Default: 32.
+    validation_split=0.2,       # Optional float between 0 and 1, fraction of data to reserve for validation.
+    subset='training',          # One of "training" or "validation". Only used if validation_split is set.
+    seed=seed)                  # Optional random seed for shuffling and transformations.
+```
+Properly Setting the Random Seed in ML Experiments. Not as Simple as You Might Imagine: https://medium.com/@ODSC/properly-setting-the-random-seed-in-ml-experiments-not-as-simple-as-you-might-imagine-219969c84752
+## Usefull materials:
+1. Tensorflow for Deep Learning Research lectures: https://web.stanford.edu/class/cs20si/2017/lectures/
