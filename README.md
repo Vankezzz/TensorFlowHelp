@@ -41,6 +41,11 @@ raw_train_ds = tf.keras.preprocessing.text_dataset_from_directory(
     subset='training',          # One of "training" or "validation". Only used if validation_split is set.
     seed=seed)                  # Optional random seed for shuffling and transformations.
 ```
+Source answer: https://stackoverflow.com/questions/38604437/what-is-a-seed-in-tensorflow
+```
+The term "seed" is an abbreviation of the standard term "random seed". TensorFlow operators that produce random results accept an optional seed parameter.
+If you pass the same number to two instances of the same operator, they will produce the same sequence of results.
+```
 Properly Setting the Random Seed in ML Experiments. Not as Simple as You Might Imagine: https://medium.com/@ODSC/properly-setting-the-random-seed-in-ml-experiments-not-as-simple-as-you-might-imagine-219969c84752
 ## Usefull materials:
 1. Tensorflow for Deep Learning Research lectures: https://web.stanford.edu/class/cs20si/2017/lectures/
