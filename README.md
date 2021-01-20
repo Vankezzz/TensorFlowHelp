@@ -57,6 +57,22 @@ To make the randomness predictable, we use the concept of seed. Seed helps get p
 ```
 Properly Setting the Random Seed in ML Experiments. Not as Simple as You Might Imagine: 
 https://medium.com/@ODSC/properly-setting-the-random-seed-in-ml-experiments-not-as-simple-as-you-might-imagine-219969c84752
+3. How does method of tf.data.Dataset `take(batch_size)` work?
+Example code, where `take(batch_size)` is used (python):
+```
+raw_train_ds = tf.keras.preprocessing.text_dataset_from_directory(
+    directory='aclImdb/train',
+    batch_size=batch_size,  # Size of the batches of data. Default: 32.
+    validation_split=0.2,  # Optional float between 0 and 1, fraction of data to reserve for validation.
+    subset='training',  # One of "training" or "validation". Only used if validation_split is set.
+    seed=seed)  # Optional random seed for shuffling and transformations.
+
+for text_batch, label_batch in raw_train_ds.take(1):
+    for i in range(3):
+        print("Review", text_batch.numpy()[i])
+        print("Label", label_batch.numpy()[i])
+```
+Source answer:https://stackoverflow.com/questions/64138844/in-tensorflow-understanding-pipeline-what-is-use-of-take1-in-for-feature-batc
 
 ## Usefull materials:
 1. Tensorflow for Deep Learning Research lectures: https://web.stanford.edu/class/cs20si/2017/lectures/
