@@ -75,6 +75,7 @@ for text_batch, label_batch in raw_train_ds.take(1):
         print("Label", label_batch.numpy()[i])
 ```
 tf.data.Dataset.take(number_of_batch) - this is a sample, where the size is batch_size. For instance, you have 96 samples and batch_size=32 then it's mean that number_of_batch=96/32=3 (no more)
+
 Source answer:https://stackoverflow.com/questions/64138844/in-tensorflow-understanding-pipeline-what-is-use-of-take1-in-for-feature-batc
 
 ## Usefull materials:
