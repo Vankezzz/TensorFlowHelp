@@ -80,3 +80,7 @@ Source answer:https://stackoverflow.com/questions/64138844/in-tensorflow-underst
 
 ## Usefull materials:
 1. Tensorflow for Deep Learning Research lectures: https://web.stanford.edu/class/cs20si/2017/lectures/
+
+## Terminalogy
+Embeddings - В языковом моделировании отдельные слова и группы слов сопоставляются векторам – некоторым численным представлениям с сохранением семантической связи. Сжатое векторное представление слова называют эмбеддингом.
+Мешок слов - это модель представления текста в виде вектора (набора слов). Каждому слову в тексте сопоставляется число его вхождений.
